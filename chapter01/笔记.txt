@@ -1,0 +1,51 @@
+名称空间：
+  使用 iostream，而不是iostream.h,则应该使用下面的名称空间编译指令来使iostream中的定义对程序可用：  
+  using编译指令： using namespace std；
+  名称空间支持是C++的一项特性，在编写大型程序时，组合代码更加容易，易于组织程序。如：对两个不同厂的同名函数的区分。
+  如：   Microflop::wanda("go dancing？")；      //  use Microflop namespace version
+        Piscine::wanda("a fish named Desire")  //   use Piscine namespace version
+     如上方式，类、函数和变量便是C++编译器的标准组件，都被放置在名称空间std中。
+  so，在没有使用iostream时使用cout s的实际输出方式是：
+                  std::cout  <<  "come up and c++ me some time";
+                  std::cout  << std::endl;
+                  
+  针对这两种表述方式的转换问题，使用using编译指令应运而生。
+  using namespace std；时，可以使用名称空间中定义的名称，而不使用std：： 前缀。
+  同时也可这样表述: using std::cout;
+                  using std::endl;
+                  using std::cin;       便可以直接使用cin cout endl 而不必加std：： 前缀。
+            
+使用cout进行c++输出：
+   消息显示：  cout<< "come up and c++ me some time";
+              << :此符号表示该语句把这个字符串发送给cout；该符号指出了信息流动的路径；
+              cout：一个预定义的对象，知道如何显示字符串、数字和单个字符等；
+              cout对象有一个接口，其对象属性包含了一个插入运算符（<<),如果string 是一个字符串，则后续代码将显示字符串
+                  cout<<string;
+              其中我们可以看出 插入运算符<<是C中移位运算符的重载。
+控制符 endl：       
+  cout << endl;
+  endl 是一个特殊的C++符号，表示：重起一行；
+
+换行符 \n ：
+  与endl 有同样的效果；一般，在使用字符串时使用\n，其他情况使用endl。一个差别是，endl确保程序继续运行前刷新输出（将其立即
+  显示在屏幕上），而使用\n不能得到这样的保证。 
+  换行符是一种“转义序列”的按键组合；
+  
+c++源代码的格式化：
+    回车和空格制表符(Tab)可以相互转换；其中，c++中；表示一行的结束。即，可以把一条语句放在几行上，也可以把几条语句放在一行上。
+    虽然输入格式上限制小，但还是要遵循一些规则： c、c++ 中不能把空格、制表符和回车放在元素中间，也不能把回车放在字符中间。
+    int ma in()
+    re
+    trun 0;
+    cout << "hello ,
+    word ";   这是一个错误的示范，不被允许.然而在c++11新增的原始(raw)字符串可以包含回车。
+    
+    源代码中的标记和空白
+    c++源代码风格：
+      *每条语句占一行；
+      *每个函数都有一个开始i花括号和一个结束花括号，这两个花括号个占一行；
+      *函数的语句都相对于花括号进行缩进；
+      *与函数名称相关的圆括号周围没有空白；    -- 帮助区分函数 和 一些也使用圆括号的 c++ 内置结构；
+  
+  c++语句：
+      声明语句创建变量，赋值语句给该变量提供一个值；
