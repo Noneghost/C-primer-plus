@@ -59,4 +59,8 @@ c++源代码的格式化：
       cout 的新花样: 
           cout << carrots ; // 存储的是整型打印的是字符串。 比printf好用多了
       其他c++ 语句：
-          
+          使用cin：
+            cin >> carrtos;  -- 从键盘输入的值赋给 carrtos 可以搭配 cin.get（） 使用
+          使用cout进行拼接:
+            cout << "Now you have "<< carrots << " carrots." << endl;
+      类简介：
