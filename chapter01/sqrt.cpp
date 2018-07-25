@@ -11,7 +11,7 @@ int main(void)
   double side;
   side = sqrt(area);
   cout <<"That's the  equivalent of a square " <<side
-       <<"feet to the side. "<< endl;
+       <<" feet to the side. "<< endl;
   cout << "How fascinating!"<<endl;
   
   return 0;
