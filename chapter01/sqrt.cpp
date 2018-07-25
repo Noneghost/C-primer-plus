@@ -1,5 +1,5 @@
 #include <iostream>
-#include <cmath>
+#include <cmath>    // 如果是老式编译器。则使用 math.h
 
 int main(void)
 { 
