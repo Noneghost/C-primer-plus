@@ -22,4 +22,19 @@
                 long至少32位，且至少与int一样长；
                 long long 至少64位，至少与long一样长；
         c++对字节的定义：c++的字节至少能够容纳实现的基本字符集的相邻位组成，也就是说，可能取值的数目必须等于或超过字符数目。就会出现当使用国际编码标准时，unicode时有可能16位或则32位表示1个字节；
-        
+        运算符sizeof和头文件climits：
+                对类型名（int）使用sizeof时应把sizeof放在括号里，对变量括号时可选项
+                头文件climits定义了符号常量来表示类型的限制；
+                符号常量climits中： CHAR_BIT CHAR_MAX CHAR_MIN SCHAR_MAX SCHAR_MIN UCHAR_MAX  SHRT_MAX SHRT_MIN USHRT_MAX等等
+                符号常量 预处理方式： #define 宏定义
+        初始化：
+            c++ 中相对于c中奇异的初始话  ： int a = 1；  int a(1);
+            如果不对函数内部定义的变量进行初始化，该变量的值是不确定的。这意味着该变量是它被创建之前，相应内存单元保存的值；
+        c++11 初始化方式：
+            int han = {24}; //大括号用于初始化变量
+            在使用大括号d时可以使用等号也可以不使用；
+            int han{24}；
+            其次，大括号里可以不包含e任何东西，在这种情况下，变量将初始化为0；
+            int han{}；
+            int han = {}；
+            
